@@ -73,6 +73,19 @@ const TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
 ```
 
+## ⚠️ Note for Forked Repositories / ملاحظة للمستودعات المنسوخة
+
+To fully customize the website, please add your own images to the following directories inside the `public` folder:
+للحصول على تخصيص كامل للموقع، يرجى إضافة صورك الخاصة في المجلدات التالية داخل مجلد `public`:
+
+1.  **Personal Picture / الصورة الشخصية**:
+    - Place your personal photo in: `public/assets/images/personal_pictures`
+    - ضع صورتك الشخصية في: `public/assets/images/personal_pictures`
+
+2.  **Project Images / صور المشاريع**:
+    - Place your project screenshots/images in: `public/assets/images/projects_images`
+    - ضع صور مشاريعك في: `public/assets/images/projects_images`
+
 ## 📝 Contact / التواصل
 
 **Abadi Amado**

@@ -1,0 +1,285 @@
+@import "tailwindcss";
+@layer theme, base, mui, components, utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+@source "./src/**/*.{js,jsx}";
+
+@theme {
+  --color-primary: #f7cf40;
+  --color-secondary: #104481;
+  /* sky */
+  --color-blueSky-50: #f0f9ff;
+  --color-blueSky-100: #dff2fe;
+  --color-blueSky-200: #b8e6fe;
+  --color-blueSky-300: #74d4ff;
+
+  --color-shadow: #1e2939;
+
+  /* Light */
+  --color-light-100: #FFFFFF;
+  --color-light-200: #F3F3F3;
+  --color-light-300: #C8CBD4;
+
+  /* Dark */
+  --color-dark-100: #030712;
+  --color-dark-200: #101828;
+  --color-dark-300: #13131B;
+  --color-dark-400: #181d29;
+
+  --color-accent: #EBE4D1;
+  --color-accentTo: #a19e97;
+  --color-textLight: #918569;
+  --color-titleLight: #d6ac4b;
+
+  
+  --animate-Move: Move 20s infinite linear;
+  --animate-trun: trun 20s  infinite linear;
+  
+
+@keyframes Move {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -100%;
+  }
+}
+
+@keyframes trun {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: 100%;
+  }
+}
+
+}
+
+/* @utilities felxblity{
+@apply 
+} */
+@layer componets {
+
+  /* General Styles */
+  .directionRtl {
+    direction: rtl
+  }
+
+  /* styles header Elements */
+  .blurLiquidGlass{
+    @apply z-60 fixed justify-around top-0 left-0 right-0 w-full 
+        backdrop-blur-md  bg-sky-50/60 dark:bg-dark-200/80 
+        transition-all duration-300
+  }
+
+  .header {
+    @apply md:px-6 w-full justify-between h-[60px] **:self-center 
+    gap-5 flex-wrap flex
+  }
+
+  .nav-bar {
+    @apply min-w-[(40vw,40%)] h-[66%] rounded-4xl bg-light-100/30
+     dark:bg-secondary/15 *:self-center relative
+  }
+
+  .blueShadow {
+    @apply shadow-red-100 dark:shadow-blue-400 shadow
+  }
+
+  .compbinColors {
+    @apply *:bg-linear-to-t *:from-light-100 *:to-90% dark:*:bg-linear-to-r dark:*:from-primary dark:*:to-secondary
+  }
+
+  .ulStyle {
+    @apply md:flex  *:rounded-2xl *:p-[2px] gap-4 mx-2 
+    *:self-center *:text-[14px] *:font-[Raleway] *:font-bold *:bg-sky-400/50 
+    *:shadow *:text-light-100 w-full h-[100%]
+  }
+
+  .backgroundSke {
+    @apply bg-linear-to-b from-sky-200 to-20% dark:from-dark-200 dark:to-90%
+  }
+
+  .hoverToNavMediumScreen {
+    @apply hover:bg-transparent hover:text-blueSky-300 hover:shadow-red-100 
+    hover:shadow dark:hover:text-light-100 dark:hover:shadow-sky-100
+      dark:hover:bg-linear-to-l dark:hover:from-secondary
+      dark:hover:to-accent 
+  }
+
+  /* style Nav dar to smoll screens  */
+
+  .shadowScreen {
+    @apply fixed top-0 bottom-0 right-0 left-0 h-full z-10 bg-light-200/40 dark:bg-sky-950/40 border-accent border-2
+  }
+.buttomShowNavSmoll{
+  @apply  hover:bg-light-100 dark:hover:bg-sky-950 
+        rounded-full hover:scale-[1.3] transition-all focus:scale-[0.8]
+}
+  .styleUlOnSmollScreen {
+    @apply *:mb-4.5 pt-4 translate-y-[13%] *:font-[Raleway] *:text-2xl *:text-light-300 *:font-bold bg-transparent *:text-center
+  }
+
+  .styleToBodyNavSmoller {
+    @apply absolute top-9 left-[10%] bg-linear-to-t from-light-200 to-sky-300 shadow-lg shadow-amber-50 rounded-2xl w-[80%] min-h-[377px]
+  }
+
+  .backgrounColorToNavSmoll {
+    @apply dark:from-dark-100 dark:to-sky-950 dark:shadow-sky-500
+  }
+
+
+  .hoverToNavSmollScreen {    
+ @apply md:text-2xl 
+ 
+  text-cyan-700 
+      dark:text-light-300 
+        dark:hover:shadow-lg 
+        dark:hover:from-cyan-100  dark:hover:to-sky-800/30
+  }
+
+.ALink{
+  @apply  rounded-2xl inline-block
+             w-[40%] pt-2  bg-light-100 dark:bg-transparent
+             dark:bg-linear-to-t dark:text-light-100 dark:from-light-100 
+              dark:to-10%
+            h-[43px] shadow   
+             focus:bg-transparent
+}
+
+  .focusLink {
+    @apply hover:outline-2 hover:outline-offset-2 hover:outline-accent dark:hover:outline-sky-500/30
+    focus:to-transparent focus:text-light-100 focus:from-transparent
+  }
+
+  /* style main projects */
+
+  .buttomProjects {
+    @apply bg-secondary dark:bg-sky-950/60 focus:outline-2 focus:outline-offset-2 focus:outline-[#f7cf40] focus:bg-transparent
+  }
+
+  .hoverToProjects {
+    @apply  hover:scale-[1.2]
+    dark:border-sky-800
+ hover:rotate-4
+dark:hover:border-accent
+hover:border-primary/50
+ hover:border-3
+dark:hover:outline-accent
+hover:shadow-primary/50
+hover:opacity-[1]
+hover:relative
+dark:hover:shadow-accent
+hover:shadow-[0px_0px_50px] hover:z-30
+  }
+
+  /* style About */
+.boerderOnpictur{
+  @apply border-light-100 dark:border-accent
+}
+.boerderOnpictur2{
+  @apply border-light-100 dark:border-[#f8e3a2]
+}
+
+
+/* style skills */
+
+.blurBody {
+    @apply bg-linear-to-t   from-accent/20  via-transparent to-accent/20   dark:from-sky-950/30 dark:via-transparent dark:to-sky-950/30
+}
+.blurBody2 {
+    @apply bg-linear-to-r   from-accent/50 from-10%  via-transparent to-accent/50 to-96%  dark:from-sky-950/30 dark:via-transparent dark:to-sky-950/30
+}
+
+/* style contact */
+.sendButton{
+  @apply hover:opacity-[1] hover:scale-[1.2] hover:shadow-primary/50
+     hover:shadow-[0px_0px_30px] hover:outline-3 hover:outline-offset-3
+      hover:outline-primary/50 focus:outline-3 focus:outline-offset-3 
+      focus:outline-primary/50 focus:text-titleLight/80  focus:opacity-[1]
+      focus:bg-transparent focus:scale-[0.9]
+}
+
+.title{
+  @apply        text-transparent     bg-clip-text bg-linear-to-b from-sky-700 to-accent
+                  dark:from-light-100 dark:to-sky-800
+}
+.foucOnfiles{
+  @apply bg-light-100 focus:bg-light-300/20 dark:focus:bg-sky-950 opacity-50 focus:opacity-100 dark:bg-dark-200/95 
+}
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .swiper div img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.pb::-webkit-scrollbar {
+  display: none;
+}
+
+
+.k:hover {
+    border-color: rgba(255, 255, 255, 0.623);
+    background: linear-gradient(
+      to bottom,
+      #C8CBD4
+      rgba(62, 51, 51, 0.247),
+      #C8CBD4
+    );
+    box-shadow: 9px 8px #C8CBD4;
+    
+  }
+
+  .k:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+.Stop:hover{
+  .Paused{
+ animation-play-state: paused;   
+  }
+  
+}
+
+
+.container-1 {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+
+  margin: 0 auto;
+  width: 80%;
+  min-height: 100vh;
+
+
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -78,7 +78,7 @@ const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
 **Abadi Amado**
 
 - **GitHub**: [Start-0-0](https://github.com/Start-0-0)
-- **Email**: [abadeamado7@gmail.com](mailto:abadeamado7@gmail.com)
+- **Email**: [abadeamado7@gmail.com](mailto:badiyflatt@gmail.com)
 
 ---
 

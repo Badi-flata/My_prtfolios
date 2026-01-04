@@ -1,24 +1,12 @@
 import { FaHeart } from 'react-icons/fa'
-import { useLanguageStore } from '../components/setLanguage'
+import { useLanguageStore, dataTitles } from '../components/setLanguage'
 
 function Footer() {
   const { language } = useLanguageStore()
   const year = new Date().getFullYear()
 
-  const content = {
-    EN: {
-      rights: `All rights reserved © ${year} Abadi Amado`,
-      madeWith: "Made with",
-      by: "by Abadi"
-    },
-    AR: {
-      rights: `جميع الحقوق محفوظة © ${year} عبادي امادو`,
-      madeWith: "صنع بـ",
-      by: "بواسطة عبادي"
-    }
-  }
-
-  const t = content[language] || content.EN
+  const { footer } = dataTitles
+  const t = footer[language]
 
   return (
     <footer className="w-full py-8 blurBody border-t border-light-200 dark:border-dark-100 relative overflow-hidden">
@@ -31,7 +19,7 @@ function Footer() {
 
         {/* Copyright */}
         <div className="text-light-300 dark:text-light-300 text-sm font-[Tajawal]">
-          {t.rights}
+          {t.rightsText} {year} {t.name}
         </div>
 
         {/* Made With */}

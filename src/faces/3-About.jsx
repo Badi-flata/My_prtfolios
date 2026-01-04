@@ -1,27 +1,12 @@
 import { motion } from 'framer-motion'
-import { useLanguageStore } from '../components/setLanguage'
+import { useLanguageStore, dataTitles } from '../components/setLanguage'
 import pic1 from '../../public/assets/images/personal_pictures/picture_1.jpg'
 import pic4 from '../../public/assets/images/personal_pictures/picture_4.jpg'
 
 function About() {
     const { language } = useLanguageStore()
-
-    const content = {
-        E: {
-            title: "About Me",
-            name: "Abadi Amado (Ahmed)",
-            desc: "I am a passionate Full Stack Developer specializing in the MERN Stack and Cross-Platform Mobile Development. I build premium, high-performance applications with a focus on user experience and modern design.",
-            stack: "MERN Stack / Full Stack - Cross Platform"
-        },
-        ض: {
-            title: "عني",
-            name: "عبادي امادو (احمد)",
-            desc: "مطور تطبيقات شامل (Full Stack) متخصص في  MERN Stack  وتطبيقاق الهاتف التي تعمل على النظامين(Cross Platform)  .أقوم ببناء تطبيقات عالية الأداء بتصاميم عصرية وتجربة مستخدم مميزة.",
-            stack: "MERN Stack / Full Stack - Cross Platform"
-        }
-    }
-
-    const { title, name, desc, stack } = content[language] || content.E
+    const { about } = dataTitles
+    const { title, name, desc, stack } = about[language]
 
     return (
         <section className="w-full min-h-[60vh] flex flex-col items-center justify-center py-20 mb-20 overflow-hidden relative" id="abuot">

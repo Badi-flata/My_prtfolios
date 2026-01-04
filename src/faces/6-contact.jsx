@@ -5,51 +5,29 @@
 // نموذج التواصل مع تكامل EmailJS وأنيميشن النجاح/الخطأ
 
 import { motion } from 'framer-motion'
-import { useLanguageStore } from '../components/setLanguage'
+import { useLanguageStore, dataTitles } from '../components/setLanguage'
 import { FaPaperPlane } from 'react-icons/fa'
 import Lottie from 'lottie-react'
 import sendMessageAnimation from '../../public/assets/animateIcons/Send Message.json'
 import { useContactForm } from '../components/useContactForm'
-import { contactMethods, socialLinks } from '../components/contactData'
+import { contactMethods as staticMethods, socialLinks } from '../components/contactData'
 
 function Contact() {
   // Language state / حالة اللغة
   const { language } = useLanguageStore()
+  const { contact, contactInfo } = dataTitles
+  const t = contact[language]
 
   // Contact form hook / هوك نموذج الاتصال
   const { formData, status, errorMessage, handleChange, handleSubmit } = useContactForm()
 
-  // Translations / الترجمات
-  const content = {
-    E: {
-      title: "Contact Me",
-      subtitle: "Get In Touch",
-      desc: "I'm currently available for freelance work or full-time opportunities. If you have a project that needs some creative touch, I'd love to hear about it.",
-      namePlaceholder: "Your Name",
-      emailPlaceholder: "Your Email",
-      messagePlaceholder: "Your Message",
-      sendButton: "Send Message",
-      sending: "Sending...",
-      success: "Message Sent Successfully! Thank you, we'll get back to you soon.",
-      error: "Something went wrong. Please try again.",
-      contactInfo: "Contact Info"
-    },
-    ض: {
-      title: "تواصل معي",
-      subtitle: "ابقى على تواصل",
-      desc: "أنا متاح حالياً للعمل الحر أو الفرص الوظيفية بدوام كامل. إذا كان لديك مشروع يحتاج إلى لمسة إبداعية، ويسعدني أن أسمع منك.",
-      namePlaceholder: "الاسم",
-      emailPlaceholder: "البريد الإلكتروني",
-      messagePlaceholder: "رسالتك",
-      sendButton: "إرسال الرسالة",
-      sending: "جاري الإرسال...",
-      success: "تم إرسال الرسالة بنجاح! شكراً لك، سنتواصل معك قريباً.",
-      error: "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
-      contactInfo: "معلومات التواصل"
+  // Dynamic Contact Methods (Localize Location)
+  const contactMethods = staticMethods.map(method => {
+    if (method.label === "Location") {
+      return { ...method, text: contactInfo[language].locationText }
     }
-  }
-
-  const t = content[language] || content.E
+    return method
+  })
 
   return (
     <section id="contact" className="w-full py-20 relative overflow-hidden">
@@ -96,7 +74,7 @@ function Contact() {
             className="w-full lg:w-1/3 flex flex-col gap-8"
           >
             <h3 className="text-2xl font-bold font-[Tajawal] text-secondary dark:text-light-100 border-l-4 rtl:border-r-4 rtl:border-l-0 border-accent pl-4 rtl:pr-4">
-              {t.contactInfo}
+              {t.contactInfoTitle}
             </h3>
 
             {/* Contact Methods / طرق التواصل */}

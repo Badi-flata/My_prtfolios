@@ -58,6 +58,130 @@ export const dataTitles = {
             'E': { title: 'ipsum dolor', detailed: ' ipsum dolor, sit amet consectetur adipisicing elit. Modi praesentium repudiandae sit necessitatibus hic labore, nemo distinctio nisi. Neque quae, facere porro quam iste nobis inventore in laudantium sapiente quasi?' },
             'ض': { title: 'يلبايابتبلففنءل', detailed: 'يبليبلسمحغ بفب قيقق ' }
         }
+    },
+
+    // About Section
+    about: {
+        E: {
+            title: "About Me",
+            name: "Abadi Amado (Ahmed)",
+            desc: "I am a passionate Full Stack Developer specializing in the MERN Stack and Cross-Platform Mobile Development. I build premium, high-performance applications with a focus on user experience and modern design.",
+            stack: "MERN Stack / Full Stack - Cross Platform"
+        },
+        "ض": {
+            title: "عني",
+            name: "عبادي امادو (احمد)",
+            desc: "مطور تطبيقات شامل (Full Stack) متخصص في  MERN Stack  وتطبيقاق الهاتف التي تعمل على النظامين(Cross Platform)  .أقوم ببناء تطبيقات عالية الأداء بتصاميم عصرية وتجربة مستخدم مميزة.",
+            stack: "MERN Stack / Full Stack - Cross Platform"
+        }
+    },
+
+    // Skills Section
+    skills: {
+        E: {
+            title: "My Skills",
+            current: "Technologies I Work With",
+            future: "Technologies I'm Learning",
+        },
+        "ض": {
+            title: "مهاراتي",
+            current: "التقنيات التي أستخدمها",
+            future: "تقنيات ساتعلمها قريبا",
+        },
+    },
+
+    // Projects Section UI
+    projectsSection: {
+        E: {
+            title: "Projects",
+            subtitle: "Projects",
+            technologies: "Technologies:",
+            noProject: "No project used: ",
+            allProjects: "All Projects"
+        },
+        "ض": {
+            title: "المشاريع",
+            subtitle: "عندما تجعل الخيال وقعاً",
+            technologies: "التقنيات:",
+            noProject: "لا مشروع يتضمن : ",
+            allProjects: "جميع المشاريع"
+        }
+    },
+
+    // Contact Section
+    contact: {
+        E: {
+            title: "Contact Me",
+            subtitle: "Get In Touch",
+            desc: "I'm currently available for freelance work or full-time opportunities. If you have a project that needs some creative touch, I'd love to hear about it.",
+            namePlaceholder: "Your Name",
+            emailPlaceholder: "Your Email",
+            messagePlaceholder: "Your Message",
+            sendButton: "Send Message",
+            sending: "Sending...",
+            success: "Message Sent Successfully! Thank you, we'll get back to you soon.",
+            error: "Something went wrong. Please try again.",
+            contactInfoTitle: "Contact Info"
+        },
+        "ض": {
+            title: "تواصل معي",
+            subtitle: "ابقى على تواصل",
+            desc: "أنا متاح حالياً للعمل الحر أو الفرص الوظيفية بدوام كامل. إذا كان لديك مشروع يحتاج إلى لمسة إبداعية، ويسعدني أن أسمع منك.",
+            namePlaceholder: "الاسم",
+            emailPlaceholder: "البريد الإلكتروني",
+            messagePlaceholder: "رسالتك",
+            sendButton: "إرسال الرسالة",
+            sending: "جاري الإرسال...",
+            success: "تم إرسال الرسالة بنجاح! شكراً لك، سنتواصل معك قريباً.",
+            error: "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+            contactInfoTitle: "معلومات التواصل"
+        }
+    },
+
+    // Contact Info Details
+    contactInfo: {
+        E: {
+            emailLabel: "Email",
+            phoneLabel: "Phone",
+            locationLabel: "Location",
+            locationText: "Makkah, Saudi Arabia"
+        },
+        "ض": {
+            emailLabel: "البريد الإلكتروني",
+            phoneLabel: "الهاتف",
+            locationLabel: "الموقع",
+            locationText: "مكة المكرمة، المملكة العربية السعودية"
+        }
+    },
+
+    // Footer
+    footer: {
+        E: {
+            rightsText: "All rights reserved ©",
+            name: "Abadi Amado",
+            madeWith: "Made with",
+            by: "by Abadi"
+        },
+        "ض": {
+            rightsText: "جميع الحقوق محفوظة ©",
+            name: "عبادي امادو",
+            madeWith: "صنع بـ",
+            by: "بواسطة عبادي"
+        }
+    },
+
+    // UI Components
+    ui: {
+        E: {
+            downloadCV: "Download My CV",
+            cvUnavailable: "Sorry, the CV file is currently unavailable.",
+            starGithub: "Star on GitHub"
+        },
+        "ض": {
+            downloadCV: "تحميل السيرة الذاتية",
+            cvUnavailable: "عذراً، ملف السيرة الذاتية غير متوفر حالياً.",
+            starGithub: "ادعمنا على GitHub"
+        }
     }
 }
 
